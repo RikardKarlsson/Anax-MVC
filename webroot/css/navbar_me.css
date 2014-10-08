@@ -1,0 +1,144 @@
+/**
+ * Based on http://dbwebb.se/coachen/en-navbar-med-drop-down-meny-i-ren-html-och-css
+ * Changed to only style li-items instead of a.
+ */
+#navbar {
+  margin-bottom: 0;
+  /*
+    background: #E4DFFD;
+    background-image: url('../img/hex_border_f5f3ff.png');
+    background-repeat: repeat; 
+*/
+}
+
+.navbar {
+  /*background-color: #eee;*/
+  border-radius: 4px;
+}
+ 
+.navbar ul {
+  list-style: none; 
+  margin: 0; 
+  padding: 0;
+}
+ 
+.navbar li {
+  display: inline-block;
+  border-top: 4px solid transparent; 
+  color: #000; 
+  position: relative; 
+}
+ 
+.navbar a,
+.button
+{
+  /*  
+  display: block;
+  padding: 1em;
+  text-decoration: none;
+  color: inherit;
+  white-space: nowrap; 
+  */
+    background: #B5A9F0;
+  
+    padding: 0.3em 0.3em 0.3em 0.3em;
+/*
+    font-family: Great Vibes, Tahoma, Geneva, sans-serif;
+    font-size: 22px;
+*/
+    text-decoration:none;
+
+    /*
+    border: 1px solid #D7B589;
+    */
+
+
+    /*to make it look nice*/
+   border: 1px;
+   border-color: #B5A9F0;
+   border-style: outset;
+
+   background: -webkit-gradient(linear, left top, left bottom, from(#B5A9F0), to(#8579C0));
+   background: -webkit-linear-gradient(top, #B5A9F0, #8579C0);
+   background: -moz-linear-gradient(top, #B5A9F0, #8579C0);
+   background: -ms-linear-gradient(top, #B5A9F0, #8579C0);
+   background: -o-linear-gradient(top, #B5A9F0 #8579C0);
+
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;
+
+   color: #000;  
+}
+.button--smaller {
+    padding: 0.1em 0.1em 0.1em 0.1em;
+    font-family: Georgia, serif; /*TODO remove fix to change from arial*/
+    font-size: 0.8em;
+}
+.navbar a:link,
+.navbar a:visited {
+    color: #000;
+}
+/*
+.navbar li:hover {
+  color: #666; 
+  border-color: #666;
+  background-color: #ddd;
+  
+  
+} 
+*/
+.button:hover,
+.navbar a:focus,
+.navbar a:hover{
+   border-style: inset;
+   background: -webkit-gradient(linear, left top, left bottom, from(#B5A9F0), to(#8579C0));
+   background: -webkit-linear-gradient(bottom, #B5A9F0, #8579C0);
+   background: -moz-linear-gradient(bottom, #B5A9F0, #8579C0);
+   background: -ms-linear-gradient(bottom, #B5A9F0, #8579C0);
+   background: -o-linear-gradient(bottom, #B5A9F0 #8579C0);
+
+}
+/*
+.navbar li.selected-parent, 
+.navbar li.selected {
+  
+  color: #222; 
+  border-color: #222;
+}
+  */
+.navbar li.selected-parent a,
+.navbar li.selected a {
+    background: transparent; 
+    border: 1px solid #fff;
+    box-shadow: inset 0 0 6px #fff;
+}
+
+.navbar ul ul {
+  background-color: #fff; 
+  padding: 2px 6px 2px 0; 
+  position: absolute; 
+  left: -9999px; 
+  z-index: 2;
+  background-color: #eee;
+}
+ 
+.navbar li li {
+  width: 100%;
+  border-top: none;  
+  border-left: 4px solid transparent;  
+}
+
+.navbar li:hover ul {
+  left: 0;
+}
+ 
+.navbar li li:hover {
+  color: #666; 
+  border-color: #666;
+}
+
+.navbar li li.selected {
+  color: #222; 
+  border-color: #222;
+}

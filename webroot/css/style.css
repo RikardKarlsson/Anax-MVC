@@ -1,0 +1,179 @@
+/**
+ * General elements
+ */
+
+@import url(figure.css);
+html {
+    /*
+    background: #B5A9F0; 
+    */
+    background: #E4DFFD;
+    background-image: url('../img/hex_border_f5f3ff_30.png');
+    background-repeat: repeat; 
+    overflow-y: scroll; 
+}
+body {
+
+  /*color: #333;*/
+  font-family: Georgia, serif;
+  overflow-y: scroll;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: arial, sans-serif;
+}
+
+h1 {
+  font-size: 2.2em;
+}
+
+
+/**
+ * Layout of the main page elements 
+ */
+#wrapper {
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 960px; 
+  padding: 0;
+    background: #E4DFFD;
+    background-image: url('../img/hex_border_f5f3ff.png');
+    background-repeat: repeat; 
+    border-radius: 10px;
+    box-shadow: 4px 4px 3px #333, 0 0 2px #333;
+  
+}
+
+
+/**
+ * Layout for header
+ */
+#wrapper--header {
+    background: #B5A9F0; 
+    background-image: url('../img/hex_border_f5f3ff.png');
+    background-repeat: repeat; 
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: 0;
+    padding: 10px;
+    padding-bottom: 20px;
+
+    
+}
+#header {
+  position: relative;
+  margin-bottom: 10px;
+}
+.sitelogo {
+    margin-top: 6px;
+}
+.sitetitle {
+    /*
+  position: absolute;
+  
+  top: 6px;
+  left: 130px;
+  */
+    margin-left: 10px;
+  font-size: 48px;
+}
+
+.siteslogan {
+    */
+  position: absolute;
+  top: 65px;
+  left: 130px;
+  */
+  font-style: italic;
+}
+
+
+/**
+ * Layout for main
+ */
+#main {
+  min-height: 20em;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    overflow: auto;
+}
+
+/**
+ * Layout for footer
+ */
+#footer {
+  margin-top: 0;
+  /*border-top: 1px solid #ccc;*/
+  padding-top: 22px;
+  padding-bottom: 22px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+    background: #B5A9F0; 
+    background-image: url('../img/hex_border_f5f3ff.png');
+    background-repeat: repeat; 
+
+}
+
+.sitefooter {
+
+}
+
+
+/**
+ * For articles
+ */
+.article1 {
+  width: 700px;
+  border-right: 1px solid #ccc;
+  padding-right: 1em;
+}
+
+.article1 h1,
+.article1 h2 {
+  border-bottom: 1px solid #ccc;
+}
+.article--me {
+    margin-left: 240px;
+    margin-right: 240px;
+}
+.me--aside img,
+.me--aside iframe {
+    border-radius: 5px;
+}
+.me--aside {
+    width: 220px; 
+}
+
+.byline {
+  margin-top: 34px;
+  border-top: 1px solid #f5f3ff;
+  padding-top: 12px;
+    font-style: italic;
+    font-size: small;
+}
+
+.byline p {
+  margin-top: 0;
+}
+.byline img {
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+
+
+
+.t-right {
+    float: right;
+}
+.t-left {
+    float: left;
+}
+.t-text-center {
+    text-align: center;
+}

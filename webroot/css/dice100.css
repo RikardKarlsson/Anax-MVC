@@ -1,0 +1,87 @@
+.dice-game-100__display-result__player{
+    border-color: #B5A9F0;
+    border-width: 1px;
+    border-style: dotted;
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    width: 200px;
+}
+/*
+.dice-game-100__display-result__player .button {
+    color: #000;
+}*/
+.dice-game-100__display-result__player p:first-child {
+    border-bottom-color: #B5A9F0;
+    border-bottom-width: 1px;
+    border-bottom-style: dotted;
+}
+.page-dice100 select {
+    font-family: Georgia, serif; /*TODO remove fix to change from arial*/
+    font-size: 0.8em;
+
+}
+/*
+ * To display a dice styled widh CSS.
+ */
+
+.dice {
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+   background: #B5A9F0;
+    /*to make it look nice*/
+   border: 1px;
+   border-color: #8C6C44;
+   border-style: outset;
+   background: -webkit-gradient(linear, left top, left bottom, from(#B5A9F0), to(#8579C0));
+   background: -webkit-linear-gradient(top, #B5A9F0, #8579C0);
+   background: -moz-linear-gradient(top, #B5A9F0, #8579C0);
+   background: -ms-linear-gradient(top, #B5A9F0, #8579C0);
+   background: -o-linear-gradient(top, #B5A9F0 #8579C0);
+
+   -webkit-border-radius: 3px;
+   -moz-border-radius: 3px;
+   border-radius: 3px;
+
+   color: #000;
+}
+.dice__dot {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 5px;
+    background: #000;
+}
+.dice__dot--0 {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.dice__dot--1 {
+    margin-left: 0;
+    margin-top: 0;
+}
+.dice__dot--2 {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.dice__dot--3 {
+    margin-left: 20px;
+    margin-top: 0;
+}
+.dice__dot--4 {
+    margin-left: 0;
+    margin-top: 20px;
+}
+.dice__dot--5 {
+    margin-left: 0;
+    margin-top: 10px;
+}
+.dice__dot--6 {
+    margin-left: 20px;
+    margin-top: 10px;
+}
