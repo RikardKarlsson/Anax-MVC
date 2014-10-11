@@ -79,7 +79,7 @@ h1 {
 }
 
 .siteslogan {
-    */
+    /*
   position: absolute;
   top: 65px;
   left: 130px;
@@ -144,6 +144,11 @@ h1 {
 .me--aside img,
 .me--aside iframe {
     border-radius: 5px;
+    width: 220px;
+    height: 165px;
+}
+.me--aside iframe {
+    border-style: none;
 }
 .me--aside {
     width: 220px; 
@@ -166,7 +171,47 @@ h1 {
 }
 
 
-
+/*
+ * 12 columns, 8.3% each
+ */
+.t-width-2of12 {
+    width: 150px;
+}
+.width-4of12, /*deprecated*/
+.t-width-4of12 {
+    /*width: 32%;*/
+    width: 300px;
+}
+.width-8of12,  /*deprecated*/
+.t-width-8of12 {
+    width: 66%;
+}
+.t-width-6of12 {
+    width: 49%;
+}
+.t-width-7of12 {
+    width: 57%;
+}
+.t-center-8of12 {
+    margin-left: 160px;
+    margin-right: 160px;
+}
+.t-center-4-6-2{
+    margin-left: 320px;
+    width: 460px;
+} 
+.t-center-4-4-4{
+    margin-left: 34%;
+    width: 33%;
+} 
+.t-columns-2 {
+    column-count: 2;
+    column-width: 450px;
+    -moz-column-count: 2;
+    -moz-column-width: 450px;
+    -webkit-column-count: 2;
+    -webkit-column-width: 450px;
+}
 
 .t-right {
     float: right;

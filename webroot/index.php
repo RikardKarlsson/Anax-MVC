@@ -56,7 +56,7 @@ $app->router->add('redovisning', function() use ($app) {
     $byline = $app->fileContent->get('byline.md');
     $byline = $app->textFilter->doFilter($byline, 'shortcode, markdown');
     
-    $app->views->add('me/page', [
+    $app->views->add('me/report', [
         'content' => $content,
         'byline' => $byline,
     ]);
@@ -64,18 +64,12 @@ $app->router->add('redovisning', function() use ($app) {
 });
 $app->router->add('kasta-tarning', function() use ($app) {
  
-    $app->theme->setTitle("Redovisning");
+    $app->theme->setTitle("Kasta tärning");
  
-    $content = $app->fileContent->get('redovisning.md');
-    $content = $app->textFilter->doFilter($content, 'shortcode, markdown');
- 
-    $byline = $app->fileContent->get('byline.md');
-    $byline = $app->textFilter->doFilter($byline, 'shortcode, markdown');
 
 include('incl/dice.php');
     $app->views->add('me/calendar', [
         'content' => $content,
-        'byline' => $byline,
     ]);
  
 });
