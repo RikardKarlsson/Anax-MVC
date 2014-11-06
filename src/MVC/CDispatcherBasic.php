@@ -129,6 +129,7 @@ class CDispatcherBasic implements \Anax\DI\IInjectionAware
         }
 
         if ($this->isCallable()) {
+            //dump($this->params);
             return call_user_func_array([$this->controller, $this->action], $this->params);
         } else {
             throw new \Exception(

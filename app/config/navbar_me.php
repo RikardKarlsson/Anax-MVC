@@ -72,6 +72,11 @@ return [
             'url'   =>'kalender',  
             'title' => 'Kalender'
         ],
+        'comment' => [
+            'text'  =>'Kommentar', 
+            'url'   =>'comment',  
+            'title' => 'Kommentar'
+        ],
         // This is a menu item
         'source' => [
             'text'  =>'Källkod', 

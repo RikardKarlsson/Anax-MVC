@@ -69,7 +69,8 @@ return [
             'css/navbar_me.css', 
             'css/dice.css',
             'css/dice100.css',
-            'css/calendar.css'
+            'css/calendar.css',
+            'css/comment.css'
         ],
         //'stylesheets' => ['css/style.css', 'css/navbar.css'],
 

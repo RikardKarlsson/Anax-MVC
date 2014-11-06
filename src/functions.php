@@ -70,3 +70,8 @@ function getCurrentUrl() {
   $url .= $_SERVER["SERVER_NAME"] . $serverPort . htmlspecialchars($_SERVER["REQUEST_URI"]);
   return $url;
 }
+
+function getGravatarUrl($email, $sizeInPixels = 60) {
+    return 'http://www.gravatar.com/avatar/' . md5(strtolower(trim($email))) . '.jpg?s=' . $sizeInPixels;
+    
+}

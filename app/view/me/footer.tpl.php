@@ -1,5 +1,5 @@
 
-<footer>
+<footer class='t-clearfix'>
     <span class='sitefooter navbar'>
         © Copyright <a class='button button--smaller' href='http://rikardkarlsson.se'>Rikard Karlsson</a> 
         <a class='button button--smaller' href='https://github.com/RikardKarlsson/Anax-MVC'>GitHub</a> 

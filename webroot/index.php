@@ -1,6 +1,17 @@
 <?php
-require __DIR__.'/config_with_app.php'; 
+//require __DIR__.'/config_with_app.php'; 
+require __DIR__.'/config.php'; 
+// Create services and inject into the app. 
+$di  = new \Anax\DI\CDIFactoryDefault();
 
+$di->set('CommentController', function() use ($di) {
+    $controller = new \Phpmvc\Comment\CommentController();
+    $controller->setDI($di);
+    return $controller;
+});
+
+$app = new \Anax\Kernel\CAnax($di);
+//dump($app);
 //navbar is added in argument file
 $app->theme->configure(ANAX_APP_PATH . 'config/theme_me.php');
 $app->navbar->configure(ANAX_APP_PATH . 'config/navbar_me.php');//set navbar to other than defaul
@@ -38,6 +49,12 @@ $app->router->add('', function() use ($app) {
         'aside' => $aside,
         'byline' => $byline,
     ]);
+    
+    $app->dispatcher->forward([
+        'controller' => 'comment',
+        'action'     => 'view',
+        'params' =>[''],
+    ]);
 });
  /*
 $app->router->add('redovisning', function() use ($app) {
@@ -60,10 +77,17 @@ $app->router->add('redovisning', function() use ($app) {
         'content' => $content,
         'byline' => $byline,
     ]);
+    //$app->views->add('comment/index');
+    //dump($_POST);
+    $app->dispatcher->forward([
+        'controller' => 'comment',
+        'action'     => 'view',
+        'params' =>['redovisning'],
+    ]);
  
 });
 $app->router->add('kasta-tarning', function() use ($app) {
- 
+    $app->session();//start session 
     $app->theme->setTitle("Kasta tärning");
  
 
@@ -101,7 +125,47 @@ $app->router->add('kalender', function() use ($app) {
     ]);
  
 });
- 
+$app->router->add('comment', function() use ($app) {
+
+    $app->theme->setTitle("Guestbook");
+    //$app->views->add('comment/index');
+    //dump($_POST);
+    $app->dispatcher->forward([
+        'controller' => 'comment',
+        'action'     => 'view',
+        'params' =>['comment'],
+    ]);
+    //empty comment
+    /*
+    $comment = array(
+        'content' => null,
+        'name' => null,
+        'web' => null,
+        'mail' => null
+    );
+    $saveAction = 'doCreate';
+    $id = null;
+    if ( isset($_GET['id']) ) {
+        is_numeric($_GET['id']) or die ("id is not a number");
+        $id = $_GET['id'];
+        //dump($_SESSION);
+        if ( $app->session->has('comments') ) {//TODO replace 'comments', instead read it from where it is stored
+            $comments = $app->session->get('comments');
+            $comment = $comments[$id];
+        }
+        $saveAction = 'doEdit';        
+    }
+    $app->views->add('comment/form', [
+        'mail'      => $comment['mail'], //TODO check that mail exists in $comment
+        'web'       => $comment['web'],
+        'name'      => $comment['name'],
+        'content'   => $comment['content'],
+        'output'    => null,
+        'saveAction' => $saveAction,
+        'id' => $id,
+    ]);*/
+}); 
+
 $app->router->add('source', function() use ($app) {
  
     $app->theme->addStylesheet('css/source.css');

@@ -1,3 +1,4 @@
+<div class='t-clearfix'>
 <?php if(isset($aside)) : ?>
 <aside class='t-left me--aside'>
 <?=$aside?>
@@ -18,3 +19,4 @@
 <?php endif; ?>
  
 </article>
+</div>

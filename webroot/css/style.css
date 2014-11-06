@@ -164,10 +164,12 @@ h1 {
 
 .byline p {
   margin-top: 0;
+  padding-top: 0;
 }
 .byline img {
     border-radius: 3px;
     margin-bottom: 10px;
+    margin-left: 20px;
 }
 
 
@@ -222,3 +224,7 @@ h1 {
 .t-text-center {
     text-align: center;
 }
+.t-clearfix {
+    overflow: auto;
+}
+
