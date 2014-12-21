@@ -15,6 +15,8 @@ Builds upon Anax-base, read article about Anax-base ["Anax - en hållbar struktu
 
 By Mikael Roos, me@mikaelroos.se.
 
+Extended by Rikard Karlsson rikard@rikardkarlsson.com
+
 
 
 License 
@@ -111,5 +113,6 @@ v1.0.0 (2013-06-28)
  .  
 ..:  Copyright (c) 2013 - 2014 Mikael Roos, me@mikaelroos.se
 ```
+Copyright 2014 Rikard Karlsson, rikard@rikardkarlsson.com
 
 
