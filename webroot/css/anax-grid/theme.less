@@ -1,0 +1,53 @@
+/**
+ *   colour and background images
+ */
+
+html {
+    background: @colorLightBlue;
+    background-image: url(@bgImgHex_f5f3ff_30);
+    background-repeat: repeat;    
+}
+html.html--circle {
+    background-image: url(@bgImgCircle_30);
+    background-repeat: repeat;    
+}
+#wrapper {
+    background: @colorLightBlue;
+    box-shadow: 4px 4px 3px @colorShadow, 0 0 2px @colorShadow; 
+}
+#wrapper--header,
+#wrap-footer {
+    background: @colorMidBlue; 
+}
+.grid-on #wrapper,
+.grid-on #wrapper--header,
+.grid-on #wrap-footer {
+    background-image: 
+        url(@bgImgHex_f5f3ff_XS),
+        url(@baImgGrid_80_24);
+    background-repeat: repeat; 
+}
+html.html--circle .grid-on #wrapper,
+html.html--circle .grid-on #wrapper--header,
+html.html--circle .grid-on #wrap-footer {
+    background-image: 
+        url(@bgImgCircle_XS),
+        url(@baImgGrid_80_24);
+    background-repeat: repeat; 
+}
+#wrapper,
+#wrapper--header,
+#wrap-footer {
+    background-image: url(@bgImgHex_f5f3ff_XS);
+    background-repeat: repeat; 
+}
+html.html--circle #wrapper,
+html.html--circle #wrapper--header,
+html.html--circle #wrap-footer {
+    background-image: url(@bgImgCircle_XS);
+    background-repeat: repeat; 
+}
+.byline {
+    border-top: 2px dotted @colorLighterBlue;
+
+}

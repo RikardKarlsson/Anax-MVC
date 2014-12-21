@@ -57,6 +57,7 @@ return [
             'url'   =>'redovisning',  
             'title' => 'Redovisning'
         ],
+        /*
         'dice' => [
             'text'  =>'Kasta tärning', 
             'url'   =>'kasta-tarning',  
@@ -72,6 +73,7 @@ return [
             'url'   =>'kalender',  
             'title' => 'Kalender'
         ],
+         */
         'comment' => [
             'text'  =>'Kommentar', 
             'url'   =>'comment',  
@@ -80,6 +82,16 @@ return [
         'regioner' => [
             'text' => 'Regioner',
             'url' => 'regioner',
+            'title' => 'Regioner'
+        ],
+        'regioner-left-main' => [
+            'text' => 'Reg left+main',
+            'url' => 'regioner-left-main',
+            'title' => 'Regioner'
+        ],
+        'regioner-main-right' => [
+            'text' => 'Reg main+right',
+            'url' => 'regioner-main-right',
             'title' => 'Regioner'
         ],
         'typografi' => [

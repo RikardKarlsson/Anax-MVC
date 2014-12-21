@@ -143,6 +143,14 @@ class CRequestBasic
     {
         return $this->route;
     }
+    /**
+     * @return string, the route aaa/bbb/ccc will be returned as aaa--bbb--ccc
+     */
+    public function getRouteAsCssClass()
+    {
+        return "url--" . str_replace("/", "--", $this->route);
+        //return str_replace("/", "--", $this->route);
+    }
 
 
 

@@ -5,7 +5,7 @@ $size = 60;
 $gravatar = 'http://www.gravatar.com/avatar/' . md5(strtolower(trim($email))) . '.jpg?s=' . $size;
 $gravatar = getGravatarUrl($email, 60);
 ?>
-<div class='t-center-8of12' id='comments'>
+<div  id='comments'>
 <h2>Comments</h2>
 <?php if (is_array($comments)) : ?>
 <div class='comments'>

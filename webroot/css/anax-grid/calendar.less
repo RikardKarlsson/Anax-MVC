@@ -1,0 +1,253 @@
+/**
+ * calender
+ */
+.calendar {
+    margin-top: 10px;
+}
+
+.calender thead,
+.calender td,
+.calender h1 {
+    margin-top: 0;
+    padding-top: 0;
+}
+.calender h2 {
+    font-size: small;
+    padding-top: 0;
+    margin-top:0;
+    margin-bottom: 2px;
+}
+.calender{
+    border-collapse:collapse;    
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top: 0;
+    width: 100%;
+    font-size: small;
+}
+.calender table {
+    
+    table-layout: fixed; 
+    
+    width: 100%
+}
+.calender-label {
+    font-size: 15px;
+    text-align: center;
+}
+.calender td {
+    border: 1px solid #F5F3FF;  
+    padding: 10px;  
+    vertical-align: top;
+    
+    /*border-radius: 10px;*/ 
+}
+.calender td,
+.calender div,
+.calendar-entry{
+    word-wrap: break-word;
+}
+.calender td img{
+    border-radius: 0;
+}
+.calender-month-image {
+    margin-left: 310px;
+    margin-right: 310px;
+
+    
+
+}
+.calender-month-image img{
+    padding: 0;
+    display: block;
+    margin: auto;
+    border-color: #F5F3FF; /*#8C6C44;*/
+    border-width: 2px;
+    border-style: inset;
+   
+}
+.calender-day-cell {
+    
+   
+    
+    vertical-align: text-top;
+}
+.calender-day-cell__has-entry{
+    /*background: #B5A9F0;*/ 
+    /*background-image: url('../img/hex_border_f5f3ff.png');
+    background-repeat: repeat; */
+    border-radius: 10px;
+}
+.calender--big .calendar-entry {
+    /*
+    background-color: #E4DFFD;
+    border-radius: 2px;
+    */
+    /*text-align: left;*/
+   
+    /*font-weight: bold;*/
+    /*overflow: hidden;*//*TODO works???*/
+   width: 100px; /*TODO needed for word-wrap to work, why?*/
+    padding: 2px;
+}
+.calendar--name-day {
+    margin-top: 4px;
+}
+.calender--small .calender-day-cell {
+    background: transparent;
+}
+.calender--small .calendar-entry {
+    background: transparent;
+    font-size: 0.6em;
+}
+.calender-day-cell__today{
+    /*background: #F5F3FF;*/
+    /*border: 1px solid #B5A9F0; */ /*TODO not used, to low priority?*/
+
+}
+.calender--big .calender-day-cell .calendar-entry{
+    
+    /*width: 80px;*/
+}
+.calender-day-cell {
+    width: 13.5%;
+}
+.calender--big .calender-day-cell__today .calender__day-no {
+    width: 30px;
+    height: 30px;    
+    border-radius: 20px;
+    border: 2px solid white;
+    text-align: center;
+    vertical-align: middle;
+}
+.calender--small .calender-day-cell__today {
+    background: #F5F3FF;
+    border-radius: 0;
+}
+.calender-day-text {
+
+    font-size: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+
+ 
+}
+
+.calender-other-month .calender__day-no {
+    /*color:#777;*//*#6E4E26*/;/* #8F6631;*/
+   font-weight:100;
+   font-size: 0.6em;
+    
+}
+.calender thead td{
+    border: 0px;
+}
+.calender--small tbody{
+    background: #E4DFFD;
+    background-image: url('../img/hex_border_f5f3ff.png');
+    background-repeat: repeat; 
+
+    /*width: 150px;*/
+}
+.calender--samll thead {
+    background: transparent;
+}
+.calender--small td {
+    padding: 3px;
+    /*font-size: 0.5em;*/
+}
+.calender--small table {
+    padding: 0;
+    margin: 0;
+}
+.calender--small div,
+.calender--small .calender-label{
+    font-size: smaller;
+
+}
+.calender--small p {
+    padding: 0;
+    margin: 0;
+
+}
+.calender--small .calender-day-cell {
+    vertical-align: middle;
+}
+.calender--small-wrapper {
+    padding: 0;
+    margin: 0;
+    width: 150px;
+   
+}
+.calender--medium-wrapper {
+    padding: 0;
+    margin: 0;
+    width: 300px;
+    height: 250px;
+   
+}
+.calender--medium-wrapper button{
+    width: 300px;
+    /*background: #B5A9F0;
+    border-radius: 5px;
+    border-style: none;*/
+}
+.calender--medium-wrapper tbody td {
+    background: #E4DFFD;
+    background-image: url('../img/hex_border_f5f3ff.png');
+    background-repeat: repeat; 
+    
+}
+.calender a:link,
+.calender--medium-wrapper a:link{
+    text-decoration: none;
+}
+.calender-title h1 {
+    
+
+}
+.t-red-day {
+    color: #990000;/*#8C2A25;*/ /*red*/
+   font-weight:800;
+
+}
+/*
+ * Display moon combining html and css
+ */
+.moon {
+    width: 6px;
+    height: 12px;
+    border-top:  1px solid #000;
+    border-bottom: 1px solid #000;
+    display: block;
+    float: left;
+    padding: 0;
+    margin: 0;
+}
+.moon__left {
+    border-left: 1px solid #000;           
+    border-bottom-left-radius: 12px;
+    border-top-left-radius: 12px;
+    margin-left: 6px;
+    background: #000;
+}
+ .moon__right {
+    border-right: 1px solid #000;
+    border-bottom-right-radius: 12px;
+    border-top-right-radius: 12px;
+    margin-right: 0;
+    background: #000;
+}
+.moon--full {
+    background: #F5F3FF;
+}
+/*
+.calender-other-month .moon{
+    color:#6E4E26;
+   border-color: #6E4E26;   
+}
+.calender-other-month .moon--full {
+    background: #6E4E26;
+}*/

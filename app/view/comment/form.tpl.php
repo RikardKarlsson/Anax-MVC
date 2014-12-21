@@ -1,4 +1,4 @@
-<div class='comment-form t-center-8of12'>
+<div class='comment-form '>
     <form method=post>
         <input type=hidden name="redirect" value="<?=$this->url->create($pageId).'#comments'?>">
         <input type=hidden name="pageId" value="<?=$pageId?>">

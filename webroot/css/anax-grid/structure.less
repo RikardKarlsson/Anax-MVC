@@ -1,0 +1,289 @@
+#footer,
+#header,
+#navbar,
+#flash
+ {
+    .column(@columns);
+    margin-bottom: @magicNumber;
+}
+/*
+ * Fix, due to bug. Can not set column => not within page border
+ * TODO remove fix
+ */
+/*
+#footer--ver2 {
+  padding-bottom: @magicNumber;
+  padding-top: @magicNumber;
+  margin-left: 10px;
+}*/
+/**
+ *   TODO fix due to bug. Se #footer--ver2
+ */
+/*
+#navbar {
+  margin-bottom: 0;//@magicNumber;
+  margin-left: 10px;
+}*/
+/*
+#header .sitelogo {
+    .column(@columns  / 12);
+    margin-top: 5px;
+}
+#header .sitetitle {
+  .column(@columns / 12 * 4);
+  font-size: @magicNumber * 1.5;
+  display: inline-block;
+  line-height: @magicNumber * 2;
+}
+#header .siteslogan {
+  .column(@columns / 6);
+  font-style: italic;
+  margin-top: 19px;
+}
+*/
+#header .sitelogo {
+    //.column(@columns  / 12);
+    //margin-top: 5px;
+    
+}
+#header .sitetitle {
+  //.column(@columns / 12 * 4);
+  font-size: @magicNumber * 1.5;
+  display: inline-block;
+  line-height: @magicNumber * 2;
+}
+#header .siteslogan {
+  //.column(@columns / 6);
+  font-style: italic;
+  margin-top: 19px;
+}
+
+//default, only main, no sidebar present
+#main {
+    .column(@columns);
+    margin-bottom: @magicNumber;  
+}
+/* NOT USED when responsive.less is used
+//exactly one sidebar present
+//default
+#sidebar--left,
+#sidebar--right {
+    .column(@columns / 3);
+    margin-bottom: @magicNumber;
+}
+//exactly one sidebar present
+#sidebar--left + #main,
+#sidebar--only-right--fix + #main {
+    .column(@columns * 2 / 3);
+    margin-bottom: @magicNumber;
+}
+//both sidebars are present
+#sidebar--both--fix + #sidebar--left + #main {
+    .column(@columns / 2);
+    margin-bottom: @magicNumber;
+} 
+#sidebar--both--fix + #sidebar--left,
+#sidebar--both--fix + #sidebar--left + #main + #sidebar--right{
+    .column(@columns / 4);
+    margin-bottom: @magicNumber;
+}
+
+#featured-1,
+#featured-2,
+#featured-3,
+#triptych-1,
+#triptych-2,
+#triptych-3 {
+    .column(@columns / 3);
+    margin-bottom: @magicNumber;
+}
+ 
+#footer-col-1,
+#footer-col-2,
+#footer-col-3, 
+#footer-col-4 {
+    .column(@columns / 4);
+    margin-bottom: @magicNumber;
+}
+*/
+#wrap-featured,
+#wrap-main,
+#wrap-main--ver2,
+#wrap-triptych,
+#wrap-footer-col {
+    .clearfix();
+}
+/**
+ * General elements
+ */
+
+/*@import url(figure.css);*/
+
+html,
+body {
+    overflow-y: scroll;   
+}  
+
+
+/**
+ * Layout of the main page elements 
+ */
+#wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  //width: 960px; 
+  width: @total-width;
+  max-width: 960px;
+  padding: 0;
+    border-radius: 10px;
+}
+
+
+/**
+ * Layout for header
+ */
+#wrapper--header {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: @magicNumber;
+    padding-top: 8px;
+    padding-bottom: 0;
+}
+#header {
+  //position: relative;
+  margin-bottom: 2px;
+}
+
+#flash {
+  margin-top: @magicNumber;
+}
+
+
+
+/**
+ * Layout for main
+ */
+#main {
+  min-height: @magicFactor * 10em;
+    margin-top: 0;
+    margin-bottom: 0;
+    //padding-left: 10px;
+    //padding-right: 10px;
+
+    overflow: auto;
+}
+
+/**
+ * Layout for footer
+ */
+#wrap-footer {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  
+}
+#footer {
+  margin-top: 0;
+  padding-top: 4px;
+  padding-bottom: 2px;
+}
+
+.sitefooter {
+
+}
+
+
+.me #wrap-main #sidebar--left img,
+.me #wrap-main #sidebar--left iframe,
+.me #wrap-main #sidebar--right img,
+.me #wrap-main #sidebar--right iframe {
+    border-radius: 5px;
+    width: 220px;
+    height: 165px;
+}
+.me #wrap-main #sidebar--left iframe,
+.me #wrap-main #sidebar--right iframe {
+    border-style: none;
+}
+
+
+.byline {
+  margin-top: 34px;
+  padding-top: 12px;
+    font-style: italic;
+    font-size: small;
+}
+
+.byline p {
+  margin-top: 0;
+  padding-top: 0;
+}
+.byline img {
+    border-radius: 3px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+
+/*
+ * 12 columns, 8.3% each
+ */
+/*
+.t-width-2of12 {
+    width: 150px;
+}
+
+.t-width-4of12 {
+
+    width: 300px;
+}
+
+.t-width-8of12 {
+    width: 66%;
+}
+.t-width-6of12 {
+    width: 49%;
+}
+.t-width-7of12 {
+    width: 57%;
+}
+.t-center-8of12 {
+    margin-left: 160px;
+    margin-right: 160px;
+}
+.t-center-4-6-2{
+    margin-left: 320px;
+    width: 460px;
+} 
+.t-center-4-4-4{
+    margin-left: 34%;
+    width: 33%;
+} 
+.t-columns-2 {
+    column-count: 2;
+    column-width: 450px;
+    -moz-column-count: 2;
+    -moz-column-width: 450px;
+    -webkit-column-count: 2;
+    -webkit-column-width: 450px;
+}
+*/
+.t-right {
+    float: right;
+}
+.t-left {
+    float: left;
+}
+.t-text-center {
+    text-align: center;
+}
+.t-clearfix {
+    overflow: auto;
+}
+//TODO remove fix 
+/*
+p .columns-background-error-fix {
+  color: @colorMidBlue;
+}
+*/

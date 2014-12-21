@@ -69,6 +69,46 @@ class CThemeBasic implements IThemeEngine, \Anax\DI\IInjectionAware
 
         return null;
     }
+    /**
+     * 
+     * @param $element html-tag
+     * @param $classes CSS classes as a string to append to the stored classes
+     * 
+     */
+    public function getClassAttributeFor($element, $classes = null)
+    {
+        if ( isset($_GET['grid-on']) && $element == 'body') {
+            $classes = $classes . 'grid-on ';
+        }
+        //$classes = $classes . " ";
+        if ( isset($this->config['data']['style_classes'][$element])) {
+            if (is_array($this->config['data']['style_classes'][$element])) {
+                foreach ($this->config['data']['style_classes'][$element] as $class) {
+                    $classes = $classes . " " . $class;
+                }            
+            }           
+        }
+        else { //no classes set
+            if ($classes == null) {
+                return "";
+            }
+        }       
+        return "class ='" . $classes . "'";
+    }
+    /**
+     * Add styling classes to an element
+     * 
+     * @param $element html-tag
+     * @param $classes CSS classes as a string. Classes sepatated by space.
+     * 
+     */
+    public function addClassAttributeFor($element, $classes = null)
+    {
+        if ($classes != null)
+        {
+            $this->config['data']['style_classes'][$element][] = $classes;
+        }       
+    }
 
 
 
